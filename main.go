@@ -19,12 +19,12 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/grpclog"
 
-	"github.com/gogo/grpc-example/insecure"
-	pbExample "github.com/gogo/grpc-example/proto"
-	"github.com/gogo/grpc-example/server"
+	"github.com/ismiyati/grpc-example/insecure"
+	pbExample "github.com/ismiyati/grpc-example/proto"
+	"github.com/ismiyati/grpc-example/server"
 
 	// Static files
-	_ "github.com/gogo/grpc-example/statik"
+	_ "github.com/ismiyati/grpc-example/statik"
 )
 
 var (
