@@ -113,9 +113,9 @@ func main() {
 		log.Fatalln("Failed to serve OpenAPI UI")
 	}
 
-	gatewayAddr := fmt.Sprintf("localhost:%d", *gatewayPort)
-	log.Info("Serving gRPC-Gateway on https://", gatewayAddr)
-	log.Info("Serving OpenAPI Documentation on https://", gatewayAddr, "/openapi-ui/")
+	gatewayAddr := fmt.Sprintf(":%d", *gatewayPort)
+	log.Info("Serving gRPC-Gateway on http://", gatewayAddr)
+	log.Info("Serving OpenAPI Documentation on http://", gatewayAddr, "/openapi-ui/")
 	gwServer := http.Server{
 		Addr: gatewayAddr,
 		/*TLSConfig: &tls.Config{
