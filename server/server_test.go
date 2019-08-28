@@ -12,8 +12,8 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	pbExample "github.com/gogo/grpc-example/proto"
-	"github.com/gogo/grpc-example/server"
+	pbExample "github.com/ismiyati/grpc-example/proto"
+	"github.com/ismiyati/grpc-example/server"
 )
 
 //go:generate mockgen -destination mocks_test.go -package server_test github.com/gogo/grpc-example/proto UserService_ListUsersServer,UserService_ListUsersByRoleServer
