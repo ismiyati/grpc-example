@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"crypto/tls"
+	//"crypto/tls"
 	"flag"
 	"fmt"
 	"io/ioutil"
