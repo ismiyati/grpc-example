@@ -118,10 +118,10 @@ func main() {
 	log.Info("Serving OpenAPI Documentation on https://", gatewayAddr, "/openapi-ui/")
 	gwServer := http.Server{
 		Addr: gatewayAddr,
-		TLSConfig: &tls.Config{
+		/*TLSConfig: &tls.Config{
 			Certificates: []tls.Certificate{insecure.Cert},
-		},
+		},*/
 		Handler: mux,
 	}
-	log.Fatalln(gwServer.ListenAndServeTLS("", ""))
+	log.Fatalln(gwServer.ListenAndServe/*TLS*/("", ""))
 }
