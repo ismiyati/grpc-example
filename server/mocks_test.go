@@ -6,7 +6,7 @@ package server_test
 
 import (
 	context "context"
-	proto "github.com/gogo/grpc-example/proto"
+	proto "github.com/ismiyati/grpc-example/proto"
 	gomock "github.com/golang/mock/gomock"
 	metadata "google.golang.org/grpc/metadata"
 	reflect "reflect"
