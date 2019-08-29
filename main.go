@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	//"crypto/tls"
+	"crypto/tls"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -118,10 +118,10 @@ func main() {
 	log.Info("Serving OpenAPI Documentation on http://", gatewayAddr, "/openapi-ui/")
 	gwServer := http.Server{
 		Addr: gatewayAddr,
-		/*TLSConfig: &tls.Config{
+		TLSConfig: &tls.Config{
 			Certificates: []tls.Certificate{insecure.Cert},
-		},*/
+		},
 		Handler: mux,
 	}
-	log.Fatalln(gwServer.ListenAndServe/*TLS("", "")*/())
+	log.Fatalln(gwServer.ListenAndServeTLS("", ""))
 }
